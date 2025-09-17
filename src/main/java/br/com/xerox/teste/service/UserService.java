@@ -3,8 +3,8 @@ package br.com.xerox.teste.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import com.github.dozermapper.core.Mapper;
 
 import br.com.xerox.teste.domain.UserEntity;
@@ -37,7 +37,6 @@ public class UserService {
         UserEntity target = repository.findById(id).orElseThrow(RecordNotFoundException::new);
         target.setUsername(source.getUsername());
         target.setRoles(source.getRoles());
-        target.setPassword(source.getPassword());
         UserEntity result = repository.save(target);
         return mapper.map(result, UserDTO.class);
     }
