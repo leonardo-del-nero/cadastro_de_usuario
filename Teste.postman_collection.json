@@ -1,20 +1,59 @@
 {
 	"info": {
-		"_postman_id": "fd814b4f-853d-49d9-a45d-eab837f01c2a",
+		"_postman_id": "4c4249a2-f428-477e-a105-d70f85fbbf29",
 		"name": "Teste",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "10223194",
-		"_collection_link": "https://universal-station-279774.postman.co/workspace/XBRA~e3a371e4-9764-4862-8109-a07cc513a2de/collection/10223194-fd814b4f-853d-49d9-a45d-eab837f01c2a?action=share&source=collection_link&creator=10223194"
+		"_exporter_id": "45778037"
 	},
 	"item": [
 		{
 			"name": "Create",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "bradev",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"label\":\"User\",\r\n    \"url\":\"Usuários\"\r\n}",
+					"raw": "{\r\n    \"label\":\"12\",\r\n    \"url\":\"134\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/menus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"menus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "bradev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"label\":\"12\",\r\n    \"url\":\"134\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +78,13 @@
 			"name": "Update",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"label\":\"BPMN\",\r\n    \"url\":\"http://bpmn.com.br\"\r\n}",
@@ -68,7 +113,13 @@
 			"name": "Find By Id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/menus/1",
 					"protocol": "http",
@@ -88,7 +139,13 @@
 			"name": "List",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/menus",
 					"protocol": "http",
@@ -107,7 +164,13 @@
 			"name": "Delete",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "x-tenant",
+						"value": "",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/menus/1",
 					"protocol": "http",
