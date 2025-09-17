@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.hibernate.annotations.TenantId;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;

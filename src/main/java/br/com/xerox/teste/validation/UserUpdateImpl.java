@@ -7,9 +7,7 @@ import java.util.Map;
 import org.springframework.web.servlet.HandlerMapping;
 
 import br.com.xerox.teste.common.FieldMessage;
-import br.com.xerox.teste.dto.MenuDTO;
 import br.com.xerox.teste.dto.UserDTO;
-import br.com.xerox.teste.repository.MenuRepository;
 import br.com.xerox.teste.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintValidator;

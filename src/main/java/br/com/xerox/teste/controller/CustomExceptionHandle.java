@@ -3,7 +3,6 @@ package br.com.xerox.teste.controller;
 import java.util.Date;
 import java.util.stream.Collectors;
 
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import br.com.xerox.teste.common.ExceptionMessage;
 import br.com.xerox.teste.common.FieldMessage;
 import br.com.xerox.teste.exception.RecordNotFoundException;
-import jakarta.validation.ConstraintDefinitionException;
 
 @ControllerAdvice
 public class CustomExceptionHandle {
