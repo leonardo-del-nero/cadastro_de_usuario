@@ -31,7 +31,7 @@ public class UserUpdateImpl implements ConstraintValidator<UserUpdate,UserDTO> {
 		long uriId = Long.parseLong(map.get("id"));
 		
 		//Check Code
-		var result = repository.findByLabelIgnoreCase(value.getUsername());
+		var result = repository.findByUsernameIgnoreCase(value.getUsername());
 		if(result.isPresent() && !result.get().getId().equals(uriId)) list.add(new FieldMessage("username", "username already exists"));
 
 		list.stream().forEach(e -> {

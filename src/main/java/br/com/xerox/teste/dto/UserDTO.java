@@ -6,6 +6,7 @@ import java.util.List;
 import br.com.xerox.teste.common.View;
 import br.com.xerox.teste.validation.UserUpdate;
 import br.com.xerox.teste.validation.UserCreate;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -25,7 +26,7 @@ public class UserDTO implements Serializable {
     @NotBlank(message = "O campo password é obrigatório", groups = {View.Create.class, View.Update.class})
     private String password;
 
-    @NotBlank(message = "O campo roles é obrigatório", groups = {View.Create.class, View.Update.class})
+    @NotEmpty(message = "O campo roles é obrigatório", groups = {View.Create.class, View.Update.class})
     private List<String> roles;
 
 }

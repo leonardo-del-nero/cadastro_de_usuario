@@ -21,7 +21,7 @@ public class UserCreateImpl implements ConstraintValidator<UserCreate, UserDTO> 
         List<FieldMessage> list = new ArrayList<FieldMessage>();
 		
 		//Check Code
-		var result = repository.findByLabelIgnoreCase(value.getUsername());
+		var result = repository.findByUsernameIgnoreCase(value.getUsername());
 		if(result.isPresent()) list.add(new FieldMessage("username", "username already exists"));
 
 		list.stream().forEach(e -> {

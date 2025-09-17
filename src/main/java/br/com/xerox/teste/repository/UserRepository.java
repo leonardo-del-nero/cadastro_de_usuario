@@ -10,5 +10,5 @@ import br.com.xerox.teste.domain.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity,Long> {
 
     @Transactional(readOnly = true)
-    Optional<UserEntity> findByLabelIgnoreCase(String username);
+    Optional<UserEntity> findByUsernameIgnoreCase(String username);
 }
